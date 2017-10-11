@@ -51,33 +51,37 @@
 
     <!--MATCH INFO-->
     <section class="matchInfo">
-        <div class="top">
-            <div class="home">
-                <img src="http://img1.gtimg.com/sports/pics/hv1/1/217/2240/145711336.png" alt="">
-                <span>85</span>
-            </div>
-            <div class="time">10月9日03:00</div>
-            <div class="away">
-                <span>86</span>
-                <img src="http://mat1.gtimg.com/sports/nba/logo/1602/25.png" alt="">
-            </div>
-        </div>
-        <div class="middle">
-            <span></span>
-        </div>
-        <div class="bottom">
-            <span class="home">257</span>
-            <span class="type">NBA季前赛</span>
-            <span class="away">3344</span>
-        </div>
+
     </section>
 </section>
 
 
 <script src="js/zepto.min.js"></script>
 <script src="js/iscroll.js"></script>
-<script src="js/template-native.js"></script>
 <script src="js/index.js"></script>
-<script type="text/template" id="template"></script>
+<script src="js/template-native.js"></script>
+<script type="text/template" id="template">
+    <% for(var i =0; i < matchinfo.length; i++) {%>
+        <div class="top">
+            <div class="home">
+                <img src="<%=matchinfo[i]['leftBadge']%>" alt="">
+                <span><%=matchinfo[i].leftGoal%></span>
+            </div>
+            <div class="time"><%=matchinfo[i].startTime2%></div>
+            <div class="away">
+                <span><%=matchinfo[i].rightGoal%></span>
+                <img src="<%=matchinfo[i].rightBadge%>" alt="">
+            </div>
+        </div>
+        <div class="middle">
+            <span></span>
+        </div>
+        <div class="bottom">
+            <span class="home"><%=matchinfo[i].leftSupport%></span>
+            <span class="type"><%=matchinfo[i].matchDesc%></span>
+            <span class="away"><%=matchinfo[i].rightSupport%></span>
+        </div>
+    <%}%>
+</script>
 </body>
 </html>
