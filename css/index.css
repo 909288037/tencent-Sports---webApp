@@ -1,0 +1,194 @@
+html {
+  font-size: 100px;
+}
+html,
+body {
+  width: 100%;
+  color: #555;
+  background: #EBF0F5;
+}
+a,
+a:hover,
+a:visited,
+a:active,
+a:target {
+  display: block;
+  color: #555;
+}
+.main {
+  margin: 0 auto;
+}
+/*HEADER*/
+.header {
+  /*con*/
+  /*NAV*/
+}
+.header .con {
+  height: .88rem;
+  line-height: .88rem;
+  font-size: .32rem;
+  color: #FFF;
+  background: #1C90F2;
+  overflow: hidden;
+}
+.header .con .logo,
+.header .con .type {
+  float: left;
+}
+.header .con .login,
+.header .con .menu {
+  float: right;
+}
+.header .con .logo {
+  width: 1.44rem;
+  padding-left: .7rem;
+  font-size: .32rem;
+  font-weight: normal;
+  border-right: .02rem solid #066DC4;
+  background: url("../img/icon-logo.png") no-repeat 0.1rem center;
+  -webkit-background-size: .48rem;
+  background-size: .48rem;
+}
+.header .con .type {
+  padding: 0 .2rem;
+  border-left: .02rem solid #61b2f6;
+}
+.header .con .login {
+  padding: 0 .3rem;
+}
+.header .con .menu {
+  width: .88rem;
+  height: 100%;
+  background: url("../img/btn-nav.png") no-repeat center;
+  -webkit-background-size: 50%;
+  background-size: 50%;
+}
+.header .nav {
+  height: 0;
+  padding: 0;
+  background: #fff;
+  -webkit-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  overflow: hidden;
+}
+.header .nav a {
+  float: left;
+  width: 16%;
+  height: .74rem;
+  line-height: .74rem;
+  text-align: center;
+  font-size: .32rem;
+}
+.header .nav a:nth-child(6n+1) {
+  margin-left: 2%;
+}
+/*VIDEO*/
+.videoArea {
+  height: 3.6rem;
+  background: #000000;
+}
+.videoArea video {
+  width: 100%;
+  height: 100%;
+}
+/*MATCH INFO*/
+.matchInfo {
+  background: #FFF;
+  padding: .3rem;
+  height: 2.04rem;
+  font-size: 12px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.matchInfo .top {
+  height: .6rem;
+  line-height: .6rem;
+}
+.matchInfo .top .home,
+.matchInfo .top .away {
+  float: left;
+  width: 34%;
+}
+.matchInfo .top .home img,
+.matchInfo .top .away img {
+  display: inline-block;
+  width: .64rem;
+  height: .6rem;
+  vertical-align: top;
+}
+.matchInfo .top .home span,
+.matchInfo .top .away span {
+  display: inline-block;
+  font-size: .4rem;
+  vertical-align: top;
+}
+.matchInfo .top .home span {
+  margin-left: .24rem;
+}
+.matchInfo .top .away {
+  text-align: right;
+}
+.matchInfo .top .away span {
+  margin-right: .24rem;
+}
+.matchInfo .top .time {
+  float: left;
+  width: 32%;
+  font-size: .24rem;
+  color: #999;
+  text-align: center;
+}
+.matchInfo .middle {
+  position: relative;
+  width: 100%;
+  height: .04rem;
+  margin: .2rem 0;
+  background: #1C90F2;
+}
+.matchInfo .middle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: .04rem;
+  background: #F82D2D;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+.matchInfo .bottom {
+  height: .4rem;
+  line-height: .4rem;
+  text-align: center;
+}
+.matchInfo .bottom span {
+  float: left;
+  width: 34%;
+  font-size: .24rem;
+  color: #999;
+}
+.matchInfo .bottom .type {
+  width: 32%;
+}
+.matchInfo .bottom .home {
+  background: url("../img/support-left.png") no-repeat left center;
+  -webkit-background-size: .24rem;
+  background-size: .24rem;
+}
+.matchInfo .bottom .home.bg {
+  color: #F82D2D;
+  background: url("../img/support-red.png") no-repeat left center;
+  -webkit-background-size: .24rem;
+  background-size: .24rem;
+}
+.matchInfo .bottom .away {
+  background: url("../img/support-right.png") no-repeat right center;
+  -webkit-background-size: .24rem;
+  background-size: .24rem;
+}
+.matchInfo .bottom .away.bg {
+  color: #1C90F2;
+  background: url("../img/support-blue.png") no-repeat right center;
+  -webkit-background-size: .24rem;
+  background-size: .24rem;
+}
