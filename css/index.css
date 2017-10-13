@@ -192,3 +192,44 @@ a:target {
   -webkit-background-size: .24rem;
   background-size: .24rem;
 }
+/*MATCH LIST*/
+.matchList {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: .2rem .3rem;
+  font-size: 12px;
+  background: #FFF;
+  overflow: hidden;
+}
+.matchList li {
+  float: left;
+  width: 2.2rem;
+  margin-right: .2rem;
+  overflow: hidden;
+}
+.matchList li.bg p {
+  color: red;
+}
+.matchList li div {
+  position: relative;
+  width: 100%;
+  height: 1.24rem;
+}
+.matchList li div img {
+  width: 100%;
+  height: 100%;
+}
+.matchList li div span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: .08rem;
+  line-height: 15px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+.matchList li p {
+  font-size: .24rem;
+  line-height: .3rem;
+}

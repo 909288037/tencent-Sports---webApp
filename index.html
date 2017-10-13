@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <!--LESS-->
     <link rel="stylesheet" href="css/index.css">
+    <script>window.PointerEvent = undefined</script>
 </head>
 <body>
 <section class="main" id="main">
@@ -44,7 +45,7 @@
     <!--VIDEO-->
     <section class="videoArea">
         <video controls preload="none" poster="img/poster.jpg"
-               src="http://117.41.241.21/sports.tc.qq.com/AdMc1uzWdPBAEDgcQCgdTFbAfLwhdWUKCEcGu8pL26Ec/y00247c05av.mp4?vkey=F1989429A37065C2754306220666B37A87EE562B1F91F9369BA39011E954D5DE45730EB1D06536D2749B81294ADA26CD3FC8B95D0A73312B37CB73DD1B10BCC27D8E78721C6420A106475A98A26373767DE2F3FD025040CB05EBAED43096E7CEF65EEAB5C59713AFC9BE9CB2323D0C9EC7163942D3E8A846&br=121&platform=2&fmt=auto&level=0&sdtfrom=v3010&guid=2da75742d44a2096c41f2754dd8ca430">
+               src="http://117.41.241.15/sports.tc.qq.com/Anw3LEqIOyr8T6h1-2A7PTY2tTu1pjpQhWV2A1ILFicU/d0024rlg2ur.mp4?vkey=4472D4A681E37923E7640D2289926DFFAE5AD1138ED630A870909307E27AC49F93767B39151C42D308057E59E725EDE148EDBE51190F9D98A4E77A01E49B7B81215D0740A4BF97E3BD8EE1820BF98D3754C77685B0DA3A22C9921937DAFD18A4BC94CFA5D447FF4294D62823F6F898845DB75ECC94A27456&br=121&platform=2&fmt=auto&level=0&sdtfrom=v3010&guid=2da75742d44a2096c41f2754dd8ca430">
             <!--对不起您的浏览器不支持播放~~~-->
         </video>
     </section>
@@ -52,6 +53,13 @@
     <!--MATCH INFO-->
     <section class="matchInfo">
 
+    </section>
+
+    <!--MATCH LIST-->
+    <section class="matchList">
+        <ul class="clear">
+
+        </ul>
     </section>
 </section>
 
@@ -62,25 +70,38 @@
 <script src="js/template-native.js"></script>
 <script type="text/template" id="template">
     <% for(var i =0; i < matchinfo.length; i++) {%>
-        <div class="top">
-            <div class="home">
-                <img src="<%=matchinfo[i]['leftBadge']%>" alt="">
-                <span><%=matchinfo[i].leftGoal%></span>
+    <div class="top">
+        <div class="home">
+            <img src="<%=matchinfo[i]['leftBadge']%>" alt="">
+            <span><%=matchinfo[i].leftGoal%></span>
+        </div>
+        <div class="time"><%=matchinfo[i].startTime2%></div>
+        <div class="away">
+            <span><%=matchinfo[i].rightGoal%></span>
+            <img src="<%=matchinfo[i].rightBadge%>" alt="">
+        </div>
+    </div>
+    <div class="middle">
+        <span></span>
+    </div>
+    <div class="bottom">
+        <span class="home" type="1"><%=matchinfo[i].leftSupport%></span>
+        <span class="type"><%=matchinfo[i].matchDesc%></span>
+        <span class="away" type="2"><%=matchinfo[i].rightSupport%></span>
+    </div>
+    <%}%>
+</script>
+<script type="text/template" id="template2">
+    <% for(var i = 0; i < matchList.length; i++) {%>
+    <li playUrl="<%=matchList[i].playUrl%>">
+        <!--<a href="<%=matchList[i].playUrl%>">-->
+            <div>
+                <img src="<%=matchList[i].pic%>" alt="">
+                <span><%=matchList[i].duration%></span>
             </div>
-            <div class="time"><%=matchinfo[i].startTime2%></div>
-            <div class="away">
-                <span><%=matchinfo[i].rightGoal%></span>
-                <img src="<%=matchinfo[i].rightBadge%>" alt="">
-            </div>
-        </div>
-        <div class="middle">
-            <span></span>
-        </div>
-        <div class="bottom">
-            <span class="home"><%=matchinfo[i].leftSupport%></span>
-            <span class="type"><%=matchinfo[i].matchDesc%></span>
-            <span class="away"><%=matchinfo[i].rightSupport%></span>
-        </div>
+            <p><%=matchList[i].title%></p>
+        <!--</a>-->
+    </li>
     <%}%>
 </script>
 </body>
